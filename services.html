@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Money & Mindset Global</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#3b82f6',
+                        accent: '#60a5fa',
+                        light: '#dbeafe'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.15);
+        }
+    </style>
+</head>
+<body class="font-sans bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-chart-line text-primary text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-primary">Money & Mindset Global</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium">Home</a>
+                    <a href="services.html" class="text-primary font-bold">Services</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary font-medium">About</a>
+                    <a href="resources.html" class="text-gray-600 hover:text-primary font-medium">Resources</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary font-medium">Contact</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-primary font-medium">Login</button>
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Book Consultation</button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-600" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden py-4 border-t border-gray-200" id="mobile-menu">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-primary font-medium">Home</a>
+                <a href="services.html" class="block py-2 text-primary font-bold">Services</a>
+                <a href="about.html" class="block py-2 text-gray-600 hover:text-primary font-medium">About</a>
+                <a href="resources.html" class="block py-2 text-gray-600 hover:text-primary font-medium">Resources</a>
+                <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary font-medium">Contact</a>
+                <div class="pt-4 border-t border-gray-200">
+                    <button class="text-gray-600 hover:text-primary font-medium block mb-2">Login</button>
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Book Consultation</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Header -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+            <p class="text-xl max-w-3xl mx-auto">We provide a wide range of practical, relevant, and research-based content designed to develop financially empowered, forward-thinking individuals.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-l-4 border-primary">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-wallet text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Personal Finance</h3>
+                    <p class="text-gray-600 mb-4">We simplify financial concepts to help you make confident decisions.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Budgeting & savings strategies</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Managing expenses</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Understanding inflation & debt</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Building emergency funds</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Financial planning for young adults</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-l-4 border-primary">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Investing Insights</h3>
+                    <p class="text-gray-600 mb-4">We break down investing into clear, actionable lessons for beginners & young professionals.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Stocks, bonds, and mutual funds</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> ETFs and REITs</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Long-term wealth building</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Investment risks vs returns</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> How to start investing with little money</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Money market funds and treasury instruments</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-l-4 border-primary">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Innovation & Future Trends</h3>
+                    <p class="text-gray-600 mb-4">We explore how innovation shapes wealth, careers, and business opportunities.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Emerging technologies</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Digital entrepreneurship</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Fintech and digital payments</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Global business trends</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Disruptive ideas shaping the future of work</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-l-4 border-primary">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Entrepreneurship & Business Growth</h3>
+                    <p class="text-gray-600 mb-4">We guide aspiring and existing entrepreneurs on starting and scaling successful ventures.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Business ideas for students</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> How to start a small business</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Branding & marketing</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Business financing</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Side hustles and digital income streams</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-l-4 border-primary">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Student Loans & Financial Aid</h3>
+                    <p class="text-gray-600 mb-4">We help learners understand and navigate educational financing.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> HELB loans & repayment strategies</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Scholarships and grants</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Managing student debt</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Budgeting as a student</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Funding your education without stress</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-l-4 border-primary">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-briefcase text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Career Development</h3>
+                    <p class="text-gray-600 mb-4">We support young professionals in building strong, impactful careers.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> CV writing & interview tips</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Career planning</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Skills needed in the modern workplace</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Leadership & communication skills</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> How to balance work, money, and personal life</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-l-4 border-primary">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Money Mindset & Personal Growth</h3>
+                    <p class="text-gray-600 mb-4">We help you build a mindset that supports wealth and success.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Discipline & consistency</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Goal setting</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Confidence building</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Overcoming financial fear</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Developing sustainable habits</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-l-4 border-primary">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Global Perspectives</h3>
+                    <p class="text-gray-600 mb-4">We cover financial and entrepreneurial insights from around the world, especially Africa and other emerging markets.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Economic trends</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Market opportunities</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Cross-border finance insights</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Real success stories</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Choose the service that fits your needs and begin your journey to financial freedom today.</p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition duration-300">Contact Us Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-line text-accent text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Money & Mindset Global</span>
+                    </div>
+                    <p class="text-gray-400">Helping entrepreneurs and professionals achieve financial freedom through strategic advisory and mindset transformation.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white">Resources</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Personal Financial</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Investing Insights</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Innovation & Future Trends</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Entrepreneurship & Business Growth</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white"> Student Loans & Financial Aid</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Career Development</a></li>
+                
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-accent mr-2"></i>
+                            <span class="text-gray-400">Nairobi, Kenya</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-accent mr-2"></i>
+                            <span class="text-gray-400">(+254) 701 029 013</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-accent mr-2"></i>
+                            <span class="text-gray-400">info@moneyandmindset.com</span>
+                        </li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Money & Mindset Global. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

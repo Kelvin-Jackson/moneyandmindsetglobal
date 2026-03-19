@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money & Mindset Global - Financial Advisory & Entrepreneurship</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#3b82f6',
+                        accent: '#60a5fa',
+                        light: '#dbeafe'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.15);
+        }
+        /* Custom styling for select dropdown */
+        select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        select option {
+            background: white;
+            color: #374151;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-chart-line text-primary text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-primary">Money & Mindset Global</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-primary font-bold">Home</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary font-medium">Services</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary font-medium">About</a>
+                    <a href="resources.html" class="text-gray-600 hover:text-primary font-medium">Resources</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary font-medium">Contact</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-primary font-medium" id="login-btn">Login</button>
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300" id="consultation-btn">Book Consultation</button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-600" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden py-4 border-t border-gray-200" id="mobile-menu">
+                <a href="index.html" class="block py-2 text-primary font-bold">Home</a>
+                <a href="services.html" class="block py-2 text-gray-600 hover:text-primary font-medium">Services</a>
+                <a href="about.html" class="block py-2 text-gray-600 hover:text-primary font-medium">About</a>
+                <a href="resources.html" class="block py-2 text-gray-600 hover:text-primary font-medium">Resources</a>
+                <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary font-medium">Contact</a>
+                <div class="pt-4 border-t border-gray-200">
+                    <button class="text-gray-600 hover:text-primary font-medium block mb-2" id="mobile-login-btn">Login</button>
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300" id="mobile-consultation-btn">Book Consultation</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Financial Freedom Through Strategic Mindset</h1>
+                    <p class="text-xl mb-8">We help entrepreneurs and professionals build wealth through innovative financial strategies and mindset transformation.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-primary px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition duration-300" id="get-started-btn">Get Started</button>
+                        <button class="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary transition duration-300" id="learn-more-btn">Learn More</button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="bg-white rounded-xl p-6 shadow-xl max-w-md">
+                        <h3 class="text-primary text-xl font-bold mb-4">Free Financial Assessment</h3>
+                        <form class="space-y-4" id="assessment-form">
+                            <div>
+                                <label class="block text-gray-700 mb-2 font-medium">Full Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white text-gray-800" placeholder="Enter your full name">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2 font-medium">Email</label>
+                                <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white text-gray-800" placeholder="Enter your email">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2 font-medium">Current Financial Goals</label>
+                                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white text-gray-800 appearance-none">
+                                    <option value="" disabled selected class="text-gray-400">Select your financial goals</option>
+                                    <option value="wealth-building" class="text-gray-800 py-2">Wealth Building</option>
+                                    <option value="investment-strategy" class="text-gray-800 py-2">Investment Strategy</option>
+                                    <option value="business-growth" class="text-gray-800 py-2">Business Growth</option>
+                                    <option value="retirement-planning" class="text-gray-800 py-2">Retirement Planning</option>
+                                    <option value="debt-management" class="text-gray-800 py-2">Debt Management</option>
+                                    <option value="financial-education" class="text-gray-800 py-2">Financial Education</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-secondary transition duration-300">Submit Assessment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">Our Financial Services</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">We offer comprehensive financial advisory services tailored to entrepreneurs and professionals.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-t-4 border-primary">
+                    <div class="w-12 h-12 bg-light rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-pie text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Investment Strategy</h3>
+                    <p class="text-gray-600 mb-4">Customized investment portfolios designed to maximize returns while managing risk according to your financial goals.</p>
+                    <a href="services.html" class="text-primary font-semibold flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-t-4 border-primary">
+                    <div class="w-12 h-12 bg-light rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-business-time text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Business Financial Planning</h3>
+                    <p class="text-gray-600 mb-4">Strategic financial planning for entrepreneurs to scale their businesses while optimizing tax strategies.</p>
+                    <a href="services.html" class="text-primary font-semibold flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-t-4 border-primary">
+                    <div class="w-12 h-12 bg-light rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Mindset Coaching</h3>
+                    <p class="text-gray-600 mb-4">Develop the entrepreneurial mindset needed to overcome financial barriers and achieve lasting wealth.</p>
+                    <a href="services.html" class="text-primary font-semibold flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="services.html" class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-secondary transition duration-300">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-primary mb-2">500+</div>
+                    <div class="text-gray-600">Clients Served</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-primary mb-2">$5M+</div>
+                    <div class="text-gray-600">Assets Managed</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-primary mb-2">10+</div>
+                    <div class="text-gray-600">Years Experience</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-primary mb-2">98%</div>
+                    <div class="text-gray-600">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">What Our Clients Say</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Hear from entrepreneurs and professionals who transformed their financial future with us.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">IN</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ibrahim Ngugi</h4>
+                            <p class="text-gray-600 text-sm">Tech Entrepreneur</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Money & Mindset Global helped me structure my business finances in a way that allowed me to scale rapidly while minimizing tax liabilities. Their strategic advice was invaluable."</p>
+                    <div class="flex text-accent mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">IC</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ivyne Chelang'at</h4>
+                            <p class="text-gray-600 text-sm">Medical Professional</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The mindset coaching completely changed my relationship with money. I went from being fearful about investments to confidently building a diversified portfolio."</p>
+                    <div class="flex text-accent mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">KM</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Kelvin Mwau</h4>
+                            <p class="text-gray-600 text-sm">Network Engineer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Their investment strategies helped me diversify beyond engineering into stocks and bonds, creating a more resilient financial foundation for my future family."</p>
+                    <div class="flex text-accent mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Financial Future?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Schedule a complimentary consultation with our financial advisors today.</p>
+            <button class="bg-white text-primary px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition duration-300 mr-4" id="cta-consultation-btn">Book Your Consultation</button>
+            <button class="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary transition duration-300" id="cta-resources-btn">Download Resources</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-line text-accent text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Money & Mindset Global</span>
+                    </div>
+                    <p class="text-gray-400">Helping entrepreneurs and professionals achieve financial freedom through strategic advisory and mindset transformation.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white">Resources</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Personal Finance</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">investing Insights</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Innovation & Future Trends</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Entrepreneurship & Business Growth</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Student Loans & Financial Aid</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Career Development</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-accent mr-2"></i>
+                            <span class="text-gray-400">Nairobi, Kenya</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-accent mr-2"></i>
+                            <span class="text-gray-400">(+254) 701 029 013</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-accent mr-2"></i>
+                            <span class="text-gray-400">info@moneyandmindset.com</span>
+                        </li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Money & Mindset Global. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-primary">Login to Your Account</h3>
+                <button id="close-login-modal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 mb-2">Email Address</label>
+                    <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Password</label>
+                    <input type="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember" class="mr-2">
+                        <label for="remember" class="text-gray-700">Remember me</label>
+                    </div>
+                    <a href="#" class="text-primary hover:text-secondary">Forgot password?</a>
+                </div>
+                <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-secondary transition duration-300">Login</button>
+            </form>
+            <div class="mt-6 text-center">
+                <p class="text-gray-600">Don't have an account? <a href="#" class="text-primary hover:text-secondary font-medium">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consultation Modal -->
+    <div id="consultation-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-primary">Book a Consultation</h3>
+                <button id="close-consultation-modal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 mb-2">Full Name</label>
+                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Email Address</label>
+                    <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Phone Number</label>
+                    <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Preferred Date</label>
+                    <input type="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Consultation Type</label>
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option>Financial Assessment</option>
+                        <option>Investment Strategy</option>
+                        <option>Business Planning</option>
+                        <option>Mindset Coaching</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-secondary transition duration-300">Book Consultation</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Assessment form submission
+            const assessmentForm = document.getElementById('assessment-form');
+            if (assessmentForm) {
+                assessmentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your assessment submission! We will contact you soon.');
+                    assessmentForm.reset();
+                });
+            }
+            
+            // Login functionality
+            const loginBtn = document.getElementById('login-btn');
+            const mobileLoginBtn = document.getElementById('mobile-login-btn');
+            const loginModal = document.getElementById('login-modal');
+            const closeLoginModal = document.getElementById('close-login-modal');
+            
+            if (loginBtn) {
+                loginBtn.addEventListener('click', function() {
+                    loginModal.classList.remove('hidden');
+                });
+            }
+            
+            if (mobileLoginBtn) {
+                mobileLoginBtn.addEventListener('click', function() {
+                    loginModal.classList.remove('hidden');
+                    mobileMenu.classList.add('hidden');
+                });
+            }
+            
+            if (closeLoginModal) {
+                closeLoginModal.addEventListener('click', function() {
+                    loginModal.classList.add('hidden');
+                });
+            }
+            
+            // Consultation functionality
+            const consultationBtn = document.getElementById('consultation-btn');
+            const mobileConsultationBtn = document.getElementById('mobile-consultation-btn');
+            const ctaConsultationBtn = document.getElementById('cta-consultation-btn');
+            const consultationModal = document.getElementById('consultation-modal');
+            const closeConsultationModal = document.getElementById('close-consultation-modal');
+            
+            if (consultationBtn) {
+                consultationBtn.addEventListener('click', function() {
+                    consultationModal.classList.remove('hidden');
+                });
+            }
+            
+            if (mobileConsultationBtn) {
+                mobileConsultationBtn.addEventListener('click', function() {
+                    consultationModal.classList.remove('hidden');
+                    mobileMenu.classList.add('hidden');
+                });
+            }
+            
+            if (ctaConsultationBtn) {
+                ctaConsultationBtn.addEventListener('click', function() {
+                    consultationModal.classList.remove('hidden');
+                });
+            }
+            
+            if (closeConsultationModal) {
+                closeConsultationModal.addEventListener('click', function() {
+                    consultationModal.classList.add('hidden');
+                });
+            }
+            
+            // Other button functionality
+            const getStartedBtn = document.getElementById('get-started-btn');
+            const learnMoreBtn = document.getElementById('learn-more-btn');
+            const ctaResourcesBtn = document.getElementById('cta-resources-btn');
+            
+            if (getStartedBtn) {
+                getStartedBtn.addEventListener('click', function() {
+                    window.location.href = 'services.html';
+                });
+            }
+            
+            if (learnMoreBtn) {
+                learnMoreBtn.addEventListener('click', function() {
+                    window.location.href = 'about.html';
+                });
+            }
+            
+            if (ctaResourcesBtn) {
+                ctaResourcesBtn.addEventListener('click', function() {
+                    window.location.href = 'resources.html';
+                });
+            }
+            
+            // Close modals when clicking outside
+            window.addEventListener('click', function(e) {
+                if (e.target === loginModal) {
+                    loginModal.classList.add('hidden');
+                }
+                if (e.target === consultationModal) {
+                    consultationModal.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

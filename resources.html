@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Money & Mindset Global</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#3b82f6',
+                        accent: '#60a5fa',
+                        light: '#dbeafe'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.15);
+        }
+    </style>
+</head>
+<body class="font-sans bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-chart-line text-primary text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-primary">Money & Mindset Global</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium">Home</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary font-medium">Services</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary font-medium">About</a>
+                    <a href="resources.html" class="text-primary font-bold">Resources</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary font-medium">Contact</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-primary font-medium">Login</button>
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Book Consultation</button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-600" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden py-4 border-t border-gray-200" id="mobile-menu">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-primary font-medium">Home</a>
+                <a href="services.html" class="block py-2 text-gray-600 hover:text-primary font-medium">Services</a>
+                <a href="about.html" class="block py-2 text-gray-600 hover:text-primary font-medium">About</a>
+                <a href="resources.html" class="block py-2 text-primary font-bold">Resources</a>
+                <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary font-medium">Contact</a>
+                <div class="pt-4 border-t border-gray-200">
+                    <button class="text-gray-600 hover:text-primary font-medium block mb-2">Login</button>
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition duration-300">Book Consultation</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Resources Header -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Educational Resources</h1>
+            <p class="text-xl max-w-3xl mx-auto">Access our library of financial guides, articles, and tools to support your wealth-building journey.</p>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Resource 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-book text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Financial Guides</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive guides covering personal finance, investing, and wealth building strategies.</p>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li class="flex items-center"><i class="fas fa-file-pdf text-primary mr-2"></i> Beginner's Guide to Investing</li>
+                        <li class="flex items-center"><i class="fas fa-file-pdf text-primary mr-2"></i> Personal Budgeting Workbook</li>
+                        <li class="flex items-center"><i class="fas fa-file-pdf text-primary mr-2"></i> Debt Management Strategies</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-2 rounded-lg font-bold hover:bg-secondary transition duration-300">Download All Guides</button>
+                </div>
+                
+                <!-- Resource 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-video text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Video Courses</h3>
+                    <p class="text-gray-600 mb-4">Step-by-step video courses on financial topics from basic budgeting to advanced investing.</p>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li class="flex items-center"><i class="fas fa-play-circle text-primary mr-2"></i> Money Mindset Mastery</li>
+                        <li class="flex items-center"><i class="fas fa-play-circle text-primary mr-2"></i> Investment Fundamentals</li>
+                        <li class="flex items-center"><i class="fas fa-play-circle text-primary mr-2"></i> Entrepreneurship 101</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-2 rounded-lg font-bold hover:bg-secondary transition duration-300">Access Courses</button>
+                </div>
+                
+                <!-- Resource 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 card-hover border-t-4 border-primary">
+                    <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-calculator text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Financial Tools</h3>
+                    <p class="text-gray-600 mb-4">Interactive calculators and worksheets to help you plan and track your financial progress.</p>
+                    <ul class="text-gray-600 space-y-2 mb-4">
+                        <li class="flex items-center"><i class="fas fa-calculator text-primary mr-2"></i> Retirement Calculator</li>
+                        <li class="flex items-center"><i class="fas fa-calculator text-primary mr-2"></i> Investment Return Calculator</li>
+                        <li class="flex items-center"><i class="fas fa-calculator text-primary mr-2"></i> Debt Payoff Planner</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-2 rounded-lg font-bold hover:bg-secondary transition duration-300">Use Tools</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Latest Articles</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-primary font-semibold">INVESTING</span>
+                        <h3 class="text-xl font-bold text-gray-800 my-2">5 Investment Mistakes Beginners Make</h3>
+                        <p class="text-gray-600 mb-4">Avoid these common pitfalls when starting your investment journey to maximize your returns.</p>
+                        <a href="#" class="text-primary font-semibold flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Article 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-brain text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-primary font-semibold">MINDSET</span>
+                        <h3 class="text-xl font-bold text-gray-800 my-2">Developing a Wealth Mindset</h3>
+                        <p class="text-gray-600 mb-4">How to shift your thinking about money to attract more abundance into your life.</p>
+                        <a href="#" class="text-primary font-semibold flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Article 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-rocket text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-primary font-semibold">ENTREPRENEURSHIP</span>
+                        <h3 class="text-xl font-bold text-gray-800 my-2">Funding Your Business Idea</h3>
+                        <p class="text-gray-600 mb-4">Explore different financing options for turning your entrepreneurial dreams into reality.</p>
+                        <a href="#" class="text-primary font-semibold flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-secondary transition duration-300">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="bg-light rounded-xl p-8 md:p-12 max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Stay Updated</h2>
+                        <p class="text-gray-600">Subscribe to our newsletter for weekly financial insights, tips, and exclusive resources delivered directly to your inbox.</p>
+                    </div>
+                    <div class="md:w-1/3">
+                        <form class="space-y-4" id="newsletter-form">
+                            <div>
+                                <input type="email" placeholder="Your email address" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" id="newsletter-email" required>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white py-2 rounded-lg font-bold hover:bg-secondary transition duration-300">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-line text-accent text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Money & Mindset Global</span>
+                    </div>
+                    <p class="text-gray-400">Helping entrepreneurs and professionals achieve financial freedom through strategic advisory and mindset transformation.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white">Resources</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Personal Finance</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Investing Insights</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Innovation & Future Trends</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Entrepreneurship & Business Growth</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Student Loans & Financial Aid</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Career Development</a></li>
+                
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-accent mr-2"></i>
+                            <span class="text-gray-400">Nairobi, Kenya</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-accent mr-2"></i>
+                            <span class="text-gray-400">+254 701 029 013</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-accent mr-2"></i>
+                            <span class="text-gray-400">info@moneyandmindsetglobal.com</span>
+                        </li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Money & Mindset Global. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Newsletter subscription
+            const newsletterForm = document.getElementById('newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('newsletter-email').value;
+                    alert(`Thank you for subscribing with ${email}! You'll receive our weekly insights and tips.`);
+                    newsletterForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
